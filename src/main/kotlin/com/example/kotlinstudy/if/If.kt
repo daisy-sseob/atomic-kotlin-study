@@ -1,5 +1,7 @@
 package com.example.kotlinstudy.`if`
 
+import org.springframework.http.HttpStatus
+
 fun main() {
   if (1 > 0) {
     println("1은 0보다 크다")
@@ -42,3 +44,22 @@ fun oneOrTheOther(exp: Boolean): String =
   } else {
     "False!"
   }
+
+fun isSuccess(httpStatus: HttpStatus): String {
+  return if (httpStatus === HttpStatus.OK) {
+    "success"
+  } else {
+    "fail"
+  }
+}
+
+fun isSuccess2(httpStatus: HttpStatus): String {
+  return if (httpStatus === HttpStatus.OK) {
+    "success"
+  } else {
+    "fail"
+  }
+}
+
+
+

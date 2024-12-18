@@ -1,6 +1,7 @@
 package com.example.kotlinstudy.lambda
 
 import com.example.kotlinstudy.`object`.Person
+import java.util.Collections
 
 fun main() {
   val list = listOf(
@@ -26,7 +27,9 @@ fun main() {
   }
 
   val filteredPerson = filterPerson(persons = list, filter = { person: Person -> person.age > 53 })
-  
+
+  filterPerson(isOlderThan40, list)
+
   println(filteredPerson)
   
   println(filterPerson({ it.age > 52 }, list))
